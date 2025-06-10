@@ -54,3 +54,5 @@ app.get("/keqing/gacha", (req, res) => {
 app.listen(port, () => {
     console.log(`Run at port ${port}`)
 })
+
+module.exports = app
