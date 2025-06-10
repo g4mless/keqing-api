@@ -3,6 +3,8 @@ const app = express()
 const port = 5500
 const cors = require('cors')
 
+app.use(cors())
+
 const baseURL = 'https://dgolbn4rrbixbcll.public.blob.vercel-storage.com';
 
 const files = [
@@ -55,7 +57,5 @@ app.get("/keqing/gacha", (req, res) => {
 app.listen(port, () => {
     console.log(`Run at port ${port}`)
 })
-
-app.use(cors())
 
 module.exports = app
