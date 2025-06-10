@@ -34,7 +34,8 @@ const files = [
     {filename:'keqing-wet.webp', source: 'https://x.com/mar_R_o/status/1727111162284986484'},
     {filename:'keqing-wp1.webp', source: 'https://www.pixiv.net/en/artworks/87977897'},
     {filename:'keqing-wp2.webp', source: 'https://www.pixiv.net/en/artworks/90015173'},
-    {filename:'keqing-baloon.webp', source: 'https://x.com/aoirooto/status/1768200404641153087'}
+    {filename:'keqing-baloon.webp', source: 'https://x.com/aoirooto/status/1768200404641153087'},
+    {filename:'keqing-book.webp', source: 'https://danbooru.donmai.us/posts/6746285?q=keqing'}
 ];
 
 app.get("/", (req, res) => {
