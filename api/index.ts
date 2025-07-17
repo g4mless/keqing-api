@@ -46,7 +46,8 @@ const files: KeqingImage[] = [
     {filename:'keqing-wp1.webp', source: 'https://www.pixiv.net/en/artworks/87977897'},
     {filename:'keqing-wp2.webp', source: 'https://www.pixiv.net/en/artworks/90015173'},
     {filename:'keqing-baloon.webp', source: 'https://x.com/aoirooto/status/1768200404641153087'},
-    {filename:'keqing-book.webp', source: 'https://danbooru.donmai.us/posts/6746285?q=keqing'}
+    {filename:'keqing-book.webp', source: 'https://danbooru.donmai.us/posts/6746285?q=keqing'},
+    {filename:'keqing-trembling.webp', source: 'https://x.com/SubChocolat_0w0/status/1928997918138106204'}
 ];
 
 app.get('/v1/all', (c: Context) => {
