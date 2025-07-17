@@ -1,8 +1,11 @@
 import { Hono } from 'hono'
 import { handle } from 'hono/vercel'
+import { cors } from 'hono/cors'
 import type { Context } from 'hono'
 
 const app = new Hono().basePath('/api')
+
+app.use(cors())
 
 app.get('/', (c) => {
   return c.text('Keqing API')
