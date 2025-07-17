@@ -5,7 +5,7 @@ import type { Context } from 'hono'
 const app = new Hono().basePath('/api')
 
 app.get('/', (c) => {
-  return c.json({ message: "Congrats! You've deployed Hono to Vercel" })
+  return c.text('Keqing API')
 })
 
 const baseURL: string = 'https://dgolbn4rrbixbcll.public.blob.vercel-storage.com';
@@ -45,10 +45,6 @@ const files: KeqingImage[] = [
     {filename:'keqing-baloon.webp', source: 'https://x.com/aoirooto/status/1768200404641153087'},
     {filename:'keqing-book.webp', source: 'https://danbooru.donmai.us/posts/6746285?q=keqing'}
 ];
-
-app.get('/', (c: Context) => {
-  return c.text('Keqing API')
-})
 
 app.get('/v1/all', (c: Context) => {
   const result = files.map(file => ({
