@@ -47,7 +47,17 @@ const files: KeqingImage[] = [
     {filename:'keqing-wp2.webp', source: 'https://www.pixiv.net/en/artworks/90015173'},
     {filename:'keqing-baloon.webp', source: 'https://x.com/aoirooto/status/1768200404641153087'},
     {filename:'keqing-book.webp', source: 'https://danbooru.donmai.us/posts/6746285?q=keqing'},
-    {filename:'keqing-trembling.webp', source: 'https://x.com/SubChocolat_0w0/status/1928997918138106204'}
+    {filename:'keqing-trembling.webp', source: 'https://x.com/SubChocolat_0w0/status/1928997918138106204'},
+    {filename:'keqing-yum.webp', source:'https://danbooru.donmai.us/posts/7028838'},
+    {filename:'keqing-bnnuykemono.webp', source:'https://danbooru.donmai.us/posts/5965636'},
+    {filename:'keqing-goodjob.webp', source:'https://x.com/StBeSe/status/1536935464526962688'},
+    {filename:'keqing-sit2.webp', source:'https://danbooru.donmai.us/posts/8101802'},
+    {filename:'keqing-looktoviewer3.webp', source:'https://www.pixiv.net/en/artworks/121830674'},
+    {filename:'keqing-oneplus.webp', source:'https://www.bilibili.com/opus/892996625127964680'},
+    {filename:'keqing-ocean.webp', source:'https://www.pixiv.net/en/artworks/102951371'},
+    {filename:'keqing-bunchinghair.webp', source:'https://x.com/mora__ga__neee/status/1521489339951517696'},
+    {filename:'keqing-sit3.webp', source:'https://x.com/fal_maro/status/1598982789491482624'},
+    {filename:'keqing-gift.webp', source:'https://www.pixiv.net/en/artworks/102943690'},
 ];
 
 app.get('/v1/all', (c: Context) => {
