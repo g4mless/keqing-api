@@ -62,7 +62,7 @@ const files: KeqingImage[] = [
 
 app.get('/v1/all', (c: Context) => {
   const result = files.map(file => ({
-    url: `${baseURL}/${file.filename}`,
+    url: `${baseURL}${file.filename}`,
     source: file.source
   }));
   return c.json(result)
@@ -71,7 +71,7 @@ app.get('/v1/all', (c: Context) => {
 app.get('/v1/gacha', (c: Context) => {
   const random = files[Math.floor(Math.random() * files.length)]
   return c.json({
-    url: `${baseURL}/${random.filename}`,
+    url: `${baseURL}${random.filename}`,
     source: random.source
   })
 })
