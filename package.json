@@ -1,13 +1,13 @@
 {
-  "type": "module", 
+  "type": "module",
   "scripts": {
     "start": "vercel dev",
     "deploy": "vercel"
   },
   "dependencies": {
-    "hono": "^4.4.2"
+    "hono": "^4.9.5"
   },
   "devDependencies": {
-    "vercel": "^32.4.1"
+    "vercel": "^32.0.1"
   }
 }

@@ -2,7 +2,7 @@ import { Hono } from 'hono'
 import { handle } from 'hono/vercel'
 import { cors } from 'hono/cors'
 import type { Context } from 'hono'
-import keqingImages from '../index.json'
+import fs from 'fs'
 
 const app = new Hono().basePath('/api')
 
@@ -18,6 +18,11 @@ interface KeqingImage {
     filename: string;
     source: string;
 }
+
+const keqingImages: KeqingImage[] = JSON.parse(
+  fs.readFileSync(new URL('../index.json', import.meta.url), 'utf8')
+)
+
 
 const files: KeqingImage[] = keqingImages;
 
