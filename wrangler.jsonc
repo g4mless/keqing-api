@@ -1,0 +1,5 @@
+{
+  "name": "keqing-api",
+  "main": "dist/worker.js",
+  "compatibility_date": "2024-10-01"
+}
