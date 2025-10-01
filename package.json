@@ -1,13 +1,15 @@
 {
   "type": "module",
+  "name": "keqing-api",
+  "private": true,
+  "version": "1.0.0",
   "scripts": {
-    "start": "vercel dev",
-    "deploy": "vercel"
+    "build": "esbuild worker.ts --bundle --format=esm --platform=browser --outdir=dist --log-level=info"
   },
   "dependencies": {
     "hono": "^4.9.5"
   },
   "devDependencies": {
-    "vercel": "^32.0.1"
+    "esbuild": "^0.23.0"
   }
 }
