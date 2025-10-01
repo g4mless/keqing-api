@@ -9,4 +9,4 @@ worker.get('/', (c) => c.redirect('/api', 302));
 // Mount API app (has basePath('/api'))
 worker.route('/', apiApp);
 
-export default worker.fetch;
+export default { fetch: worker.fetch };
