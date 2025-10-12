@@ -18,7 +18,7 @@ app.use(cors())
 app.get('/', (c) => c.text('Keqing API'))
 
 app.get('/v1/all', (c: Context) => {
-  const result = files.map((file) => ({
+  const result = [...files].reverse().map((file) => ({
     url: `${baseURL}${file.filename}`,
     source: file.source
   }))
