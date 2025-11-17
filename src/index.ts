@@ -7,7 +7,7 @@ type KeqingImage = { filename: string; source: string }
 const files: KeqingImage[] = imagesJson as KeqingImage[]
 const baseURL = 'https://rrddcemyrcmrmpjnysgb.supabase.co/storage/v1/object/public/keq/keqing-'
 
-export default new Elysia().use(cors()).listen(3000)
+export default new Elysia().use(cors())
   .get("/", () => "Keqing API")
 
   .get('/all', () => {
