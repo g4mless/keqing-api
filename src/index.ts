@@ -7,7 +7,7 @@ type KeqingImage = { filename: string; source: string }
 const files: KeqingImage[] = imagesJson as KeqingImage[]
 const baseURL = 'https://rrddcemyrcmrmpjnysgb.supabase.co/storage/v1/object/public/keq/keqing-'
 
-const app = new Elysia().use(cors()).listen(3000)
+export default new Elysia().use(cors()).listen(3000)
   .get("/", () => "Keqing API")
 
   .get('/all', () => {
@@ -25,5 +25,3 @@ const app = new Elysia().use(cors()).listen(3000)
       source: random.source
     }
   })
-
-console.log(`running at ${app.server?.hostname}:${app.server?.port}`);
