@@ -11,11 +11,10 @@ export default new Elysia().use(cors())
   .get("/", () => "Keqing API")
 
   .get('/all', () => {
-    const result = [...files].reverse().map((file) => ({
+    return [...files].reverse().map((file) => ({
       url: `${baseURL}${file.filename}`,
       source: file.source
     }))
-    return { result }
   })
   
   .get('/gacha', () => {
