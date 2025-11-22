@@ -2,7 +2,7 @@ import { Elysia } from "elysia"
 import { cors } from '@elysiajs/cors'
 import imagesJson from '../index.json'
 
-type KeqingImage = { filename: string; source: string }
+type KeqingImage = { flnm: string; src: string }
 
 const files: KeqingImage[] = imagesJson as KeqingImage[]
 const baseURL = 'https://rrddcemyrcmrmpjnysgb.supabase.co/storage/v1/object/public/keq/keqing-'
@@ -12,15 +12,15 @@ export default new Elysia().use(cors())
 
   .get('/all', () => {
     return [...files].reverse().map((file) => ({
-      url: `${baseURL}${file.filename}`,
-      source: file.source
+      url: `${baseURL}${file.flnm}`,
+      source: file.src
     }))
   })
   
   .get('/gacha', () => {
     const random = files[Math.floor(Math.random() * files.length)]
     return {
-      url: `${baseURL}${random.filename}`,
-      source: random.source
+      url: `${baseURL}${random.flnm}`,
+      source: random.src
     }
   })
