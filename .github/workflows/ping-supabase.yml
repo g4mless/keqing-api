@@ -1,0 +1,16 @@
+name: Ping Supabase
+
+on:
+  schedule:
+    # Run every day at 00:00 UTC
+    - cron: '0 0 * * *'
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase URL
+        run: |
+          curl -I https://rrddcemyrcmrmpjnysgb.supabase.co/storage/v1/object/public/keq/keqing-fih.webp

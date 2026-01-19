@@ -9,6 +9,7 @@ const baseURL = 'https://rrddcemyrcmrmpjnysgb.supabase.co/storage/v1/object/publ
 
 export default new Elysia().use(cors())
   .get("/", () => "Keqing API")
+  .get("/healthcheck", () => "Safe")
 
   .get('/all', () => {
     return [...files].reverse().map((file) => ({
@@ -16,7 +17,7 @@ export default new Elysia().use(cors())
       source: file.src
     }))
   })
-  
+
   .get('/gacha', () => {
     const random = files[Math.floor(Math.random() * files.length)]
     return {
