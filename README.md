@@ -1,15 +1,38 @@
-# Elysia with Bun runtime
+# Keqing API
 
-## Getting Started
-To get started with this template, simply paste this command into your terminal:
-```bash
-bun create elysia ./elysia-example
-```
+A simple REST API that serves a collection of Keqing artwork images with random selection capability.
 
-## Development
-To start the development server run:
+## Features
+
+- **GET `/all`** - Returns all 89 curated Keqing images with their source attribution
+- **GET `/gacha`** - Returns a random Keqing image
+- **GET `/healthcheck`** - Health check endpoint
+
+## Setup
+
 ```bash
+# Install dependencies
+bun install
+
+# Development server (with auto-reload)
 bun run dev
+
+# Build for production
+bun build src/index.ts --outdir=dist
+
+# Run production build
+bun start
 ```
 
-Open http://localhost:3000/ with your browser to see the result.
+Server runs on `http://localhost:3000`
+
+## Stack
+
+- **Runtime:** Bun
+- **Framework:** Elysia
+- **Language:** TypeScript
+- **CORS:** Enabled
+
+## Image Storage
+
+Images are hosted on Supabase Storage with original artwork sources credited in the JSON metadata.
