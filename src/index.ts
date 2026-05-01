@@ -7,7 +7,7 @@ type KeqingImage = { flnm: string; src: string }
 const files: KeqingImage[] = imagesJson as KeqingImage[]
 const baseURL = 'https://rrddcemyrcmrmpjnysgb.supabase.co/storage/v1/object/public/keq/keqing-'
 
-export default new Elysia().use(cors())
+export default new Elysia().use(cors({methods: ['GET', 'POST', 'PUT', 'DELETE']}))
   .get("/", () => "Keqing API")
   .get("/healthcheck", () => "Safe")
 
