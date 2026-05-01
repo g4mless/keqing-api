@@ -1,3 +1,5 @@
+archiving this repo coz vercel doing something shit again now, and this repo for me was mean for learning how to do kind of this & now i'll move some api function to the repo that needs it
+
 # Keqing API
 
 A simple REST API that serves a collection of Keqing artwork images with random selection capability.
